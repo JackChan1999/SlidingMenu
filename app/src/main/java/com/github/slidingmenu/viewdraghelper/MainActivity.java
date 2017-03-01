@@ -1,12 +1,13 @@
 package com.github.slidingmenu.viewdraghelper;
 
 import android.animation.ObjectAnimator;
-import android.app.Activity;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.Window;
 import android.view.animation.CycleInterpolator;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
@@ -34,7 +35,7 @@ import com.github.slidingmenu.R;
  * updateDes：${TODO}
  * ============================================================
  */
-public class MainActivity extends Activity {
+public class MainActivity extends AppCompatActivity {
 	private ListView list,listview;
 	private ImageView head;
 	private SlideMenu2 slideMenu2;
@@ -42,6 +43,7 @@ public class MainActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		supportRequestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_main_drag);
 		slideMenu2 = (SlideMenu2) findViewById(R.id.slideMenu);
 		head = (ImageView) findViewById(R.id.head);
@@ -58,14 +60,13 @@ public class MainActivity extends Activity {
 		});
 
 		list.setAdapter(new ArrayAdapter<String>(this,
-				android.R.layout.simple_list_item_1, android.R.id.text1,
-				Data.strings) {
+				android.R.layout.simple_list_item_1,
+				android.R.id.text1, Data.strings) {
 			@Override
 			public View getView(int position, View convertView, ViewGroup parent) {
 				View view = (TextView) View.inflate(MainActivity.this,
 						android.R.layout.simple_list_item_1, null);
-				TextView textView = (TextView) view
-						.findViewById(android.R.id.text1);
+				TextView textView = (TextView) view.findViewById(android.R.id.text1);
 				textView.setTextColor(Color.parseColor("#ffffff"));
 				textView.setTextSize(24);
 				textView.setText(Data.strings[position]);
@@ -73,8 +74,7 @@ public class MainActivity extends Activity {
 			}
 		});
 		listview.setAdapter(new ArrayAdapter<String>(this,
-				android.R.layout.simple_list_item_1, android.R.id.text1,
-				Data.strings) {
+				android.R.layout.simple_list_item_1, android.R.id.text1, Data.strings) {
 			@Override
 			public View getView(int position, View convertView, ViewGroup parent) {
 				View view = (TextView) View.inflate(MainActivity.this,
@@ -84,7 +84,7 @@ public class MainActivity extends Activity {
 				textView.setTextColor(Color.parseColor("#000000"));
 				textView.setTextSize(24);
 				textView.setPadding(30, 0, 0, 0);
-				textView.setText(""+position);
+				textView.setText(Data.strings[position]);
 				return textView;
 			}
 		});

@@ -3,7 +3,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent">
 
-    <com.itheima.slidmenudemo.view.SlidMenu
+    <com.github.slidingmenu.SlidMenu
         android:id="@+id/slidmenu"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -11,5 +11,5 @@
         <include layout="@layout/slidmenu_left"/>
         <!-- 当前为主界面索引为1 -->
         <include layout="@layout/slidmenu_main"/>
-    </com.itheima.slidmenudemo.view.SlidMenu>
+    </com.github.slidingmenu.SlidMenu>
 </RelativeLayout>

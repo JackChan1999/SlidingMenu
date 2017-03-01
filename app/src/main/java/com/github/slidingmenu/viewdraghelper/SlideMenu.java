@@ -31,18 +31,19 @@ import android.widget.FrameLayout;
  */
 public class SlideMenu extends FrameLayout{
 	private String TAG = SlideMenu.class.getSimpleName();
+	private ViewDragHelper viewDragHelper;
+	private View menuView,mainView;
+	private int menuWidth;
+
 	public SlideMenu(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		init();
 	}
 
-	private ViewDragHelper viewDragHelper;
 	private void init(){
 		viewDragHelper = ViewDragHelper.create(this, callback);
 	}
-	
-	private View menuView,mainView;
-	private int menuWidth;
+
 	@Override
 	protected void onFinishInflate() {
 		super.onFinishInflate();
@@ -64,6 +65,7 @@ public class SlideMenu extends FrameLayout{
 	public boolean onInterceptTouchEvent(MotionEvent ev) {
 		return viewDragHelper.shouldInterceptTouchEvent(ev);
 	}
+
 	@Override
 	public boolean onTouchEvent(MotionEvent event) {
 		viewDragHelper.processTouchEvent(event);
@@ -95,10 +97,12 @@ public class SlideMenu extends FrameLayout{
 //			ViewHelper.setScaleX(menuView, 0.5f+0.5f*percent);
 //			ViewHelper.setScaleY(menuView, 0.5f+0.5f*percent);
 		}
+
 		@Override
 		public void onViewCaptured(View capturedChild, int activePointerId) {
 			super.onViewCaptured(capturedChild, activePointerId);
 		}
+
 		@Override
 		public void onViewReleased(View releasedChild, float xvel, float yvel) {
 			super.onViewReleased(releasedChild, xvel, yvel);
@@ -111,10 +115,12 @@ public class SlideMenu extends FrameLayout{
 				ViewCompat.postInvalidateOnAnimation(SlideMenu.this);
 			}
 		}
+
 		@Override
 		public int getViewHorizontalDragRange(View child) {
 			return menuWidth;
 		}
+
 		@Override
 		public int clampViewPositionHorizontal(View child, int left, int dx) {
 			if(child==mainView){
@@ -128,7 +134,8 @@ public class SlideMenu extends FrameLayout{
 			return left;
 		}
 	};
-	
+
+	@Override
 	public void computeScroll() {
 		if(viewDragHelper.continueSettling(true)){
 			ViewCompat.postInvalidateOnAnimation(this);

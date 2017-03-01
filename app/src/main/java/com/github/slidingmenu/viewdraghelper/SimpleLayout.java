@@ -31,15 +31,15 @@ import android.widget.LinearLayout;
  */
 public class SimpleLayout extends LinearLayout {
 	private String tag = SimpleLayout.class.getSimpleName();
-	public SimpleLayout(Context context, AttributeSet attrs) {
-		super(context, attrs);
-		init();
-	}
-
 	private View mChild;
 	private ViewDragHelper viewDragHelper;
 	private int maxVerticalDragRange;
 	private int maxHorizontalDragRange;
+
+	public SimpleLayout(Context context, AttributeSet attrs) {
+		super(context, attrs);
+		init();
+	}
 
 	private void init() {
 		viewDragHelper = ViewDragHelper.create(this, 1, callback);
@@ -136,7 +136,8 @@ public class SimpleLayout extends LinearLayout {
 			return dragLimit;
 		}
 	};
-	
+
+	@Override
 	public void computeScroll() {
 		scrollBy(0, 0);
 		if(viewDragHelper.continueSettling(false)){//

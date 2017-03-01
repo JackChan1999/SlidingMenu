@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewConfiguration;
 import android.view.ViewGroup;
 import android.widget.Scroller;
+
 /**
  * ============================================================
  * Copyright：Google有限公司版权所有 (c) 2017
@@ -28,12 +29,13 @@ import android.widget.Scroller;
  * ============================================================
  */
 public class SlidMenu extends ViewGroup {
-    private int downX;
     private final int MAIN_VIEW   = 0;// 主界面
     private final int MENU_VIEW   = 1;// 左边菜单界面
     private       int currentView = MAIN_VIEW;// 记录当前界面，默认为主界面
+    private int touchSlop;
+    private int downX;
+
     private Scroller scroller;// 用来模拟数据
-    private int      touchSlop;
 
     public SlidMenu(Context context, AttributeSet attrs) {
         super(context, attrs);
@@ -44,11 +46,11 @@ public class SlidMenu extends ViewGroup {
         this(context, null);
     }
 
-    @SuppressWarnings("deprecation")
     private void init() {
 
         scroller = new Scroller(getContext());
-        touchSlop = ViewConfiguration.getTouchSlop();// 系统默认你进行了一个滑动操作的固定值
+        // 系统默认你进行了一个滑动操作的固定值
+        touchSlop = ViewConfiguration.get(getContext()).getScaledTouchSlop();
     }
 
     /**

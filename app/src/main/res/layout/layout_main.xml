@@ -26,12 +26,12 @@
             android:textColor="#ffffff"
             android:textSize="22sp"
             android:layout_marginLeft="15dp"
-            android:text="黑马新闻"/>
+            android:text="网易新闻"/>
         
     </LinearLayout>
     
     <TextView android:layout_width="match_parent"
-        android:text="钓鱼岛是中国的..."
+        android:text="网易新闻，最好的新闻客户端"
         android:textColor="#000000"
         android:textSize="30sp"
         android:gravity="center"

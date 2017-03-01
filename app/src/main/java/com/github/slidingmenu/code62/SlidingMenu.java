@@ -52,19 +52,16 @@ public class SlidingMenu extends ViewGroup {
 	@Override
 	protected void onFinishInflate() {
 		// xml加载完成时的回调
-
 		mLeftView = getChildAt(0);
 		mContentView = getChildAt(1);
 
-		LayoutParams params = mLeftView.getLayoutParams();
-		mLeftWidth = params.width;
+		mLeftWidth = mLeftView.getLayoutParams().width;
 	}
 
 	@Override
 	protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
 		// 测量孩子
 
-		//
 		// 父和子的测量关系
 		// child.measure():期望孩子的大小该怎么设置
 		// widthMeasureSpec:期望值--
@@ -81,8 +78,7 @@ public class SlidingMenu extends ViewGroup {
 		// widthMeasureSpec:父容器希望 自己的宽度是多大
 
 		// 测量左侧
-		int leftWidthMeasureSpec = MeasureSpec.makeMeasureSpec(mLeftWidth,
-				MeasureSpec.EXACTLY);
+		int leftWidthMeasureSpec = MeasureSpec.makeMeasureSpec(mLeftWidth, MeasureSpec.EXACTLY);
 		mLeftView.measure(leftWidthMeasureSpec, heightMeasureSpec);
 
 		// 测量右侧
@@ -114,8 +110,7 @@ public class SlidingMenu extends ViewGroup {
 		mLeftView.layout(lvLeft, lvTop, lvRight, lvBottom);// 有width和height
 
 		// 给右侧布局
-		mContentView.layout(0, 0, mContentView.getMeasuredWidth(),
-				mContentView.getMeasuredHeight());
+		mContentView.layout(0, 0, mContentView.getMeasuredWidth(), mContentView.getMeasuredHeight());
 	}
 
 	@Override

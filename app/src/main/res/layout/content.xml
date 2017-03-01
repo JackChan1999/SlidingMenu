@@ -25,7 +25,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="5dp"
-            android:text="黑马新闻"
+            android:text="网易新闻"
             android:textColor="@android:color/white"
             android:textSize="25sp" />
     </LinearLayout>
@@ -36,7 +36,7 @@
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="5dp"
         android:gravity="center"
-        android:text="黑马新闻"
+        android:text="网易新闻，最好的新闻客户端"
         android:textSize="25sp" />
 
 </LinearLayout>

@@ -31,6 +31,7 @@ public class SlideMenu extends FrameLayout{
 	private View menuView,mainView;
 	private int menuWidth = 0;
 	private Scroller scroller;
+
 	public SlideMenu(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		init();
@@ -113,12 +114,12 @@ public class SlideMenu extends FrameLayout{
 			break;
 		case MotionEvent.ACTION_MOVE:
 			int moveX = (int) event.getX();
-			int deltaX = (int) ( moveX- downX);
+			int deltaX =  moveX- downX;
 			
 			int newScrollX = getScrollX() - deltaX;
 			
-			if(newScrollX<-menuWidth)newScrollX = -menuWidth;
-			if(newScrollX>0)newScrollX = 0;
+			if(newScrollX < -menuWidth) newScrollX = -menuWidth;
+			if(newScrollX > 0) newScrollX = 0;
 			
 			Log.e("Main", "scrollX: "+getScrollX());
 			scrollTo(newScrollX, 0);
@@ -162,7 +163,7 @@ public class SlideMenu extends FrameLayout{
 	
 	/**
 	 * Scroller不主动去调用这个方法
-	 * 而invalidate()可以掉这个方法
+	 * 而invalidate()可以调这个方法
 	 * invalidate->draw->computeScroll
 	 */
 	@Override
@@ -186,6 +187,5 @@ public class SlideMenu extends FrameLayout{
 			closeMenu();
 		}
 	}
-	
 
 }
