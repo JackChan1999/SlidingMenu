@@ -335,7 +335,7 @@ public class SlidMenu extends ViewGroup {
 
 <img src="http://img.blog.csdn.net/20170217141057409?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYXhpMjk1MzA5MDY2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" width="260" /> <img src="http://img.blog.csdn.net/20170217141111461?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYXhpMjk1MzA5MDY2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" width="260" /> <img src="http://img.blog.csdn.net/20170217141155067?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYXhpMjk1MzA5MDY2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" width="260" />
 
-# ViewDragHelper实现
+# ViewDragHelper实现SlidingMenu
 ```java
 public class SlideMenu2 extends FrameLayout{
 	private String TAG = SlideMenu2.class.getSimpleName();
