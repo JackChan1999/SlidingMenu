@@ -1,4 +1,4 @@
-package com.github.slidingmenu;
+package com.github.slidingmenu.code62;
 
 import android.content.Context;
 import android.util.AttributeSet;
