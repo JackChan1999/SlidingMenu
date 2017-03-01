@@ -13,6 +13,7 @@ import android.widget.FrameLayout;
 
 public class SlideMenu2 extends FrameLayout{
 	private String TAG = SlideMenu2.class.getSimpleName();
+
 	public SlideMenu2(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		init();
@@ -26,6 +27,7 @@ public class SlideMenu2 extends FrameLayout{
 	private View menuView,mainView;
 	private int menuWidth,menuHeight,mainWidth;
 	private int dragRange;
+
 	@Override
 	protected void onFinishInflate() {
 		super.onFinishInflate();
