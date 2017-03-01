@@ -10,8 +10,8 @@ import android.widget.Toast;
 
 /**
  * ============================================================
- * Copyright：${TODO}有限公司版权所有 (c) 2017
- * Author：   陈冠杰
+ * Copyright：Google有限公司版权所有 (c) 2017
+ * Author：   AllenIverson
  * Email：    815712739@qq.com
  * GitHub：   https://github.com/JackChen1999
  * 博客：     http://blog.csdn.net/axi295309066
@@ -20,8 +20,8 @@ import android.widget.Toast;
  * Project_Name：SlidingMenu
  * Package_Name：com.github.slidingmenu
  * Version：1.0
- * time：2016/3/1 12:02
- * des ：侧滑菜单
+ * time：2017/3/1 13:06
+ * des ：SlidingMenu 侧边栏 侧滑菜单
  * gitVersion：2.12.0.windows.1
  * updateAuthor：$Author$
  * updateDate：$Date$

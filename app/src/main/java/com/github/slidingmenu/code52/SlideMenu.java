@@ -7,7 +7,26 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.Scroller;
-
+/**
+ * ============================================================
+ * Copyright：Google有限公司版权所有 (c) 2017
+ * Author：   AllenIverson
+ * Email：    815712739@qq.com
+ * GitHub：   https://github.com/JackChen1999
+ * 博客：     http://blog.csdn.net/axi295309066
+ * 微博：     AndroidDeveloper
+ * <p>
+ * Project_Name：SlidingMenu
+ * Package_Name：com.github.slidingmenu
+ * Version：1.0
+ * time：2017/3/1 13:06
+ * des ：SlidingMenu 侧边栏 侧滑菜单
+ * gitVersion：2.12.0.windows.1
+ * updateAuthor：$Author$
+ * updateDate：$Date$
+ * updateDes：${TODO}
+ * ============================================================
+ */
 public class SlideMenu extends FrameLayout{
 	private View menuView,mainView;
 	private int menuWidth = 0;
