@@ -4,7 +4,7 @@
 
 观察如图2-4 的完整项目中的效果界面，点击标题栏的左上角会弹出侧边栏，再次点击时会关闭侧边栏，这种效果在很多手机应用中使用，因此，我们有必要学会如何自定义一个具有侧边栏效果的控件。
 
-<img src="http://img.blog.csdn.net/20170217141301759?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYXhpMjk1MzA5MDY2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" width="300" /> <img src="http://img.blog.csdn.net/20170217141317256?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYXhpMjk1MzA5MDY2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" width="300" />
+<img src="https://github.com/JackChen1999/SlidingMenu/blob/master/art/slidingmenu-%201.jpg" width="300" /> <img src="https://github.com/JackChen1999/SlidingMenu/blob/master/art/slidingmenu-%202.jpg" width="300" />
 
 ## 布局界面UI
 
@@ -336,6 +336,9 @@ public class SlidMenu extends ViewGroup {
 <img src="http://img.blog.csdn.net/20170217141057409?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYXhpMjk1MzA5MDY2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" width="260" /> <img src="http://img.blog.csdn.net/20170217141111461?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYXhpMjk1MzA5MDY2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" width="260" /> <img src="http://img.blog.csdn.net/20170217141155067?watermark/2/text/aHR0cDovL2Jsb2cuY3Nkbi5uZXQvYXhpMjk1MzA5MDY2/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70/gravity/SouthEast" width="260" />
 
 # ViewDragHelper实现SlidingMenu
+
+<img src="https://github.com/JackChen1999/SlidingMenu/blob/master/art/slidingmenu-%205.jpg" width="300" /> <img src="https://github.com/JackChen1999/SlidingMenu/blob/master/art/slidingmenu-%204.jpg" width="300" /> <img src="https://github.com/JackChen1999/SlidingMenu/blob/master/art/slidingmenu-%203.jpg" width="300" />
+
 ```java
 public class SlideMenu2 extends FrameLayout{
 	private String TAG = SlideMenu2.class.getSimpleName();
